@@ -6,9 +6,7 @@ export default function setupClickHandlers(scrollnav) {
   function clickHandler(event) {
     event.preventDefault();
 
-    const activeArea = window.innerHeight * 0.39;
-    const targetYPosition = getTargetYPosition(event.target, scrollnav.data);
-    const scrollYTarget = targetYPosition - activeArea;
+    const scrollYTarget = getTargetYPosition(event.target, scrollnav.data);
 
     /* istanbul ignore next */
     return scrollTo(scrollYTarget, settings.easingStyle).then(() => {

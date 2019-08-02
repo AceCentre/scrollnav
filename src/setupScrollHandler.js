@@ -5,7 +5,7 @@ export default function setupScrollHandler(scrollnav) {
   function scrollHandler() {
     const top = window.scrollY || window.pageYOffset || document.body.scrollTop;
     const boundryTop = top;
-    const boundryBottom = top + window.innerHeight * 0.4;
+    const boundryBottom = top + 150;
     const activeSection = getActiveSection(
       scrollnav.data,
       boundryTop,
